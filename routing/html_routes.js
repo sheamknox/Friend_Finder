@@ -8,7 +8,7 @@ var path = require("path");
 module.exports = function(app) {
     
     app.get("/", function(req, res) {
-        res.sendFile('home.html', {
+        res.sendFile('index.html', {
             root: path.join(__dirname, '../')
         });
     });
@@ -22,7 +22,7 @@ module.exports = function(app) {
 
     // If no matching route is found default to home
     app.use(function(req, res) {
-        res.sendFile('home.html', {
+        res.sendFile('index.html', {
             root: path.join(__dirname, '../')
         });
     });
